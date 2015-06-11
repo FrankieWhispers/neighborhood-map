@@ -1,0 +1,63 @@
+/*Set Page Styles*/
+html {
+  height: 100%
+}
+
+body {
+  position: relative;
+  height: 100%;
+  margin: 0px;
+  padding: 0px 
+}
+
+ul {
+  display: inline;
+  list-style-type: none;
+}
+
+/*Set Class Style*/
+.places{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: scroll;
+  position: absolute;
+  margin-right: 25px;
+  top: 5px;
+  right: 10px;
+  background: rgba(255,255,255, 0.9);
+  width: 25%;
+  max-height: 100%;
+  border: 1px solid gray;
+  z-index: 1;
+}
+
+.loc-msg{
+  margin: 25px;
+}
+
+.info{
+  margin-left: 20px;
+  font-size: 12px;
+  line-height: 1.4;
+  margin-top: 0px;
+}
+
+/*Set ID styles*/
+#googleMap {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 0; 
+}
+
+#places-list li {
+  border-top: 1px solid #e0e0e0;
+  padding: 0 24px;
+  cursor: pointer;
+  margin-right: 1px;
+}
+
+/*Set font for page*/
+html, body, input {
+  font-family: 'Roboto', 'Open Sans', sans-serif;
+}

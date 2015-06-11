@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="UTF-8">
+  <title>My Neighborhood - Deals</title>
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+</head>
+
+<body>
+  <div class="places">
+    <form>
+      <fieldset data-role="controlgroup" data-theme="b" data-type="horizontal">
+        <legend>Filter Locations</legend>
+        <input type="radio" name="filter" value="all" id="choice-1" onchange="filterList()" checked="checked">
+        <label for="choice-1">All</label>
+        <input type="radio" name="filter" value="food" id="choice-2" onchange="filterList()">
+        <label for="choice-2">Food</label>
+        <input type="radio" name="filter" value="entertainment" id="choice-3" onchange="filterList()">
+        <label for="choice-3">Entertainment</label>
+      </fieldset>
+    </form> 
+
+    <h2 class="loc-msg">Fort Lauderdale Places to Visit</h2>
+      <ul id="places-list" data-bind="foreach: placeList">
+        <div data-bind="if: showList($index)">
+          <li data-bind="click: $parent.goToMarker">
+            <h4 data-bind="text: name"></h4>
+            <p class="info" data-bind="html: address"></p>
+            <p class="info" data-bind="text: city"></p>
+          </li>
+        </div>
+      </ul>
+  </div>
+  
+  <div id="googleMap"></div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="js/knockout-3.2.0.js" async></script>
+  <script src="js/app.js" async></script>
+</body>
+</html>
